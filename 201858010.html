@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8"/>
@@ -9,14 +8,6 @@
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
-<style>
-   li { list-style:none; }
-  .picture { list-style:none; padding:0; margin:0; }
-  .picture li { float:left; width:50%;}
-  .picture li a {display:block; margin:5px; border: 1px }
-  .picture li img { display:block; width:50%;  height:auto;}
-  .picture li img:hover { display:block; width:100%;  height:auto;} 
-</style>
 <body>
 background-image: url("a3.jpg")
 <div data-role="page">
@@ -29,6 +20,8 @@ background-image: url("a3.jpg")
             <li><a href="https://sports.news.naver.com/sports/new/live/index.nhn?category=worldfootball&gameId=2019050950018001015">경기 결과</a></li>
             <li><a href="https://sports.news.naver.com/wfootball/schedule/index.nhn?category=champs">다른 4강 결과</a></li>
             <li><a href="https://www.uefa.com/uefachampionsleague/season=2019/statistics/round=2000980/players/index.html">챔피언스리그 골 순위</a></li>
+        	<label for="input6" class="ui-hidden-accessible">검색</label>
+        	<input type="search" name="input6" id="input6" placeholder="검색">
         </ul>
     </div>
 	<div data-role="content">
@@ -43,7 +36,6 @@ background-image: url("a3.jpg")
 				<p>종류: 기사</p>
 				</a>
 			</li>
-			<li><a href="#moive" data-rel="dialog">챔피언스리그 공식 음원</li>
 			<li><a href="https://sports.news.naver.com/wfootball/vod/index.nhn?category=champs&tab=&listType=game&date=20190509&gameId=2019050950018001015&teamCode=&playerId=&keyword=&id=538625&page=1">
 				<p class="ui-li-aside">2019/05/09</p>
 				<h3>경기 직후 손흥민과의 인터뷰</h3>
@@ -55,10 +47,17 @@ background-image: url("a3.jpg")
 				<p class="ui-li-aside">2019/06/02</p>
 				<h3>토트넘 역사상 최초의 챔피언스리그 결승전</h3>
 				<p>손흥민은 자신있다</p>
-				<p>토트넘 vs. 리버풀</p>
+				<p>토트넘  vs. 리버풀</p>
 				</a>
 			</li>
-				<a href="#panel2" data-role="button" data-inline="true">더보기</a>	
+				<a href="#panel2" data-role="button" data-inline="true">더보기</a>
+				<label for="score1">결승전 예상점수</label>
+			<input type="range" name="score" id="score1" value="2" min="0" max="6"/>	
+			<label for="final">우승팀예상</label>
+			<select name="final" id="final1" data-role="slider">
+				<option value="hottspur">토트넘</option>
+				<option value="liverpul">리버풀</option>
+			</select>
 		</ul>
 	</div>	
 	<div data-role="footer" data-position="fixed">
